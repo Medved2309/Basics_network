@@ -16,8 +16,8 @@ public class Server {
                  BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             ) {
 //                System.out.println("Клиент подключен " + clientSocket.getPort());
-                System.out.println("New connection accepted");
                 final String name = in.readLine();
+                System.out.println(String.format("New connection accepted name: %s, port: %d", name, clientSocket.getPort()));
                 out.println(String.format("Hi %s welcome to server, your port is %d", name, clientSocket.getPort()));
 //              System.out.println("Hi from server");
             }
